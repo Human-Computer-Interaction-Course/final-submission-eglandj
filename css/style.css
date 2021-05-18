@@ -1,21 +1,3 @@
-/*
-    Requirement 1 (Layout Strategy):
-        The three layout are responsive designs
-    
-    Requirement 2 (Color and Graphic Strategy):
-        1) I chose the color scheme based of some sports team colors and then made my final decision based off the 
-           background I found that was close to one of the sports teams colors I chose.
-        2) #0E0F1B, #FFB001, #d3d3d3
-        3) The header, footer, and background for the main container will have the dark blue color and highlighted 
-        with ther yellow for borders around most images and containers in the site. The text will have the gray color so it pops but idoesn't feel like a strain
-        on the eye to look at.
-
-    Requirement 3 (Font Strategy):  
-        1) I will use one font throughout the whole site. Runboy
-        2) The weights will be regular and the size will be based off what heading tag is recieved
-        3) I don't have much for reading other than the single words themself, but they spacing will need to be spread out a bit so the word doesn't feel too compact.
-*/
-
 @font-face {
     font-family: 'runboy';
     src:  url('../fonts/Runboy.woff2') format('woff2'),
@@ -75,7 +57,7 @@ footer{
     align-content: space-evenly;
 }
 
-h2{
+h2, h3{
     color: lightgray;
 }
 
@@ -360,6 +342,54 @@ h2:hover{
 
 #mobile_account{
     display: none;
+}
+
+#main_container_calc{
+    grid-area: main;
+    border: 1px solid #FFB001;
+    border-radius: 100px;
+    background-color: #0E0F1B;
+    opacity: 93%;
+}
+
+#calc_container{
+    padding-top: 3vh;
+    grid-template: 5vh 15vh / 1fr 1fr;
+    display: grid;
+    grid-template-areas: 'topcalc topcalc'
+                         'leftcalc rightcalc';
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#inside_calc_top{
+    display: block;
+    width: 100vh;
+    grid-area: topcalc;
+    font-size: 3vh;
+    letter-spacing: 2px;
+    align-self: center;
+    justify-self: center;
+}
+
+#inside_calc_top h2{
+    text-align: center;
+    text-justify: center;
+}
+
+#inside_calc_left{
+    grid-area: leftcalc;
+    text-align: left;
+    padding-left: 4%;
+    padding-top: 8%;
+}
+
+#inside_calc_right{
+    grid-area: rightcalc;
+    text-align: left;
+    padding-left: 4%;
+    padding-top: 8%;
+    
 }
 
 @media screen and (max-width: 1024px) {
