@@ -63,8 +63,8 @@ function calc_BA(){
         if(isNaN(ba) == true){
             alert("Invalid Operation");
         }else{
-            var era_string = era.toString();
-            document.getElementById("ba").value = era_string;
+            var ba_string = ba.toString();
+            document.getElementById("ba").value = ba_string;
         }
     }
 }

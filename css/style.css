@@ -42,12 +42,13 @@ footer{
     height: 13vh;
     background-color: #0E0F1B;
     margin-top: 10vh;
+    align-self: flex-end;
 }
 
 /* main body grid container */
 #main_container{
     grid-area: main;
-    border: 1px solid #FFB001;
+    border: 3px solid #FFB001;
     display: grid;
     grid-template: auto auto auto / auto auto auto;
     border-radius: 100px;
@@ -353,7 +354,7 @@ h1, h2, h3{
 
 #calc_container{
     padding-top: 3vh;
-    grid-template: 5vh 15vh / 1fr 1fr;
+    grid-template: 5vh auto / 1fr 1fr;
     display: grid;
     grid-template-areas: 'topcalc topcalc'
                          'leftcalc rightcalc';
@@ -447,13 +448,13 @@ h1, h2, h3{
     }
 
     #title{
-        font-size: 1.4vh;
+        font-size: 1.6vh;
     }
 
     .tags{
         text-align: center;
         letter-spacing: 0.2rem;
-        font-size: 2vh;
+        font-size: 3vh;
     }
     
     footer{
@@ -483,11 +484,11 @@ h1, h2, h3{
 
     #sign_up{
         margin-left: 10%;
-        font-size: 2vh;
+        font-size: 2.5vh;
     }
 
     #login{
-        font-size: 2vh;
+        font-size: 2.5vh;
     }
 
     #hamburger_container{
@@ -525,6 +526,41 @@ h1, h2, h3{
     #icon_container{
         height: 4vh;
     }
+    
+    #calc_container{
+        padding-top: 3vh;
+        grid-template: 5vh 105vh / 1fr 1fr;
+        display: grid;
+        grid-template-areas: 'topcalc topcalc'
+                             'leftcalc rightcalc';
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    
+    #inside_calc_top{
+        font-size: 2.5vh;
+        letter-spacing: 5px;
+    }
+    
+    .calcs h1{
+        text-align: center;
+        padding-bottom: 5%;
+        font-size: 3vh;
+    }
+    
+    .input_q{
+        padding-left: 4%;
+        font-size: 2.5vh;
+    }
+    
+    .text_box{
+        width: 9vh;
+        font-size: 2vh;
+    }
+    
+    .submit_btn{
+        font-size: 1.8vh;
+    }
 
     @media screen and (max-width: 650px) {
 
@@ -543,12 +579,13 @@ h1, h2, h3{
         }
         
         #title{
-            font-size: 1vh;
+            font-size: 1.5vh;
             justify-self: left;
         }
         
         header{
             height: 8vh;
+            width: auto;
         }
         
         footer{
@@ -556,11 +593,10 @@ h1, h2, h3{
         }
     
         #grid_header{
-            width: 100%;
             grid-template: 4vh 4vh / 8vh 5fr 5fr 1fr 1fr;
             grid-template-areas: 
                 'logo title title hamburger'
-                'logo search . hamburger';
+                'logo search . .';
             justify-content: center;
         }
 
@@ -575,10 +611,12 @@ h1, h2, h3{
             justify-self: center;
             align-self: center;
             height: 3vh;
+            margin-top: 2%;
         }
 
         #hamburger_icon{
             color: #FFB001;
+            align-self: center;
         }
     
         #search_bar{
@@ -628,7 +666,7 @@ h1, h2, h3{
         .tags{
             text-align: center;
             letter-spacing: 0.3vh;
-            font-size: 2vh;
+            font-size: 3vh;
         }
 
         #icon_container{
@@ -649,7 +687,6 @@ h1, h2, h3{
             grid-template-areas: 'login2  account2';
         }
 
-
         #mobile_login_signup{
             display: block;
             color: lightgray;
@@ -657,6 +694,7 @@ h1, h2, h3{
             height: 100%;
             grid-area: login2;
             justify-self: center;
+            font-size: 2.5vh;
         }
 
         #mobile_account{
@@ -665,5 +703,46 @@ h1, h2, h3{
             height: 6vh;
             align-self: center;
         }
+        
+        #main_container_calc{
+            width: fill;
+        }
+    
+        #calc_container{
+            padding-top: 3vh;
+            justify-self: center;
+            grid-template: 5vh auto / 1fr 1fr;
+            display: grid;
+            grid-template-areas: 'topcalc topcalc'
+                                'leftcalc rightcalc';
+            justify-content: space-evenly;
+            align-content: center;
+            margin-bottom: 10%;
+        }
+        
+        #inside_calc_top{
+            font-size: 2vh;
+            letter-spacing: 3px;
+        }
+        
+        .calcs h1{
+            padding-bottom: 5%;
+            font-size: 2.5vh;
+        }
+        
+        .input_q{
+            padding-left: 4%;
+            font-size: 2vh;
+        }
+        
+        .text_box{
+            width: 7vh;
+            font-size: 2vh;
+        }
+        
+        .submit_btn{
+            font-size: 1.8vh;
+        }
+
     }
 }
