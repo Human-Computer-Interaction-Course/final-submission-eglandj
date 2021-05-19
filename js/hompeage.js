@@ -1,22 +1,20 @@
-/*
-
-*/
-
-// Creates an array for the sports container selection
+// Creates an array for the sports container selection so i can index it on a user click
 const selection = document.querySelectorAll('.sports_container');
 
+// For loop that adds an onclick event to all of the containers and items inside it for each sport section
 for (i = 0; i < selection.length; i++) {
     selection[i].onclick = function(event) { 
-        var sport_select = event.target.id;
-        var page = removeChar(sport_select);
-        if (page == 'baseball'){
+        var sport_select = event.target.id;// Getting the id of what was clicked on by the user (either the image, title, or container of selected sport)
+        var page = removeChar(sport_select);// using the fucntion to remove extra numbers from the ID
+        if (page == 'baseball'){ // If statement checks to make sure that the sport selected is baseball since i only have this page created
             openTab(page);
         }else{
-            alert("Page does not exist, Coming soon!")
+            alert("Page does not exist, Coming soon!")// Lets the user know the other pages will be implemented soon
         }
     }
 }
 
+// Strips the strings of any leftover numbers
 function removeChar(string){
     var newString ="";
 	if(string.value == ""){
@@ -36,6 +34,7 @@ function removeChar(string){
     return newString;
 }
 
+// function that creates a new tab when selected sport is clicked on (currently only for baseball)
 function openTab(sport){
     url = sport.concat("_calc.html")
     const link = document.createElement('a');

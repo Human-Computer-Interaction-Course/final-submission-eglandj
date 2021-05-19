@@ -1,3 +1,9 @@
+/*
+Each function is called based on each calculate button on the html page
+Each function grabs the values based on ID from the DOM and and parse those into floats
+The if statements make sure that there are valid numbers coming in and that i can do the calculation, otherwise i inform the user that the operation is invalid
+I then do the calcualation and write it back into the input box that was left empty (i control this with readonly in the html).
+*/
 function calc_BRA(){
     var stolen = parseFloat(document.getElementById("num_bases").value);
     var pouts = parseFloat(document.getElementById("pout_ret").value);
