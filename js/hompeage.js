@@ -17,7 +17,6 @@ for (i = 0; i < selection.length; i++) {
     }
 }
 
-
 function removeChar(string){
     var newString ="";
 	if(string.value == ""){
@@ -46,6 +45,3 @@ function openTab(sport){
     link.click();
     link.remove();
 }
-
-
-

@@ -59,9 +59,63 @@
                     <div id="inside_calc_top">
                         <h2 id="main_con_title">Baseball Stat Calculators</h2>
                     </div>
-                    <div id="inside_calc_left">
+                    <div id="inside_calc_left" class="calc_con">
+                        <div id="baserunning_avg" class="calcs">
+                            <h1>Base Running Average</h1>
+                            <input class="text_box" type="text" id="num_bases">
+                            <h2 class="input_q">Number of Bases Stolen</h2>
+                            <input class="text_box" type="text" id="pout_ret">
+                            <h2 class="input_q">Putouts or Retired</h2>
+                            <br>
+                            <input id="submit_BRA" class="submit_btn" type="submit" value="Calculate" onclick="calc_BRA()">
+                            <br><br><br>
+                            <input class="text_box" type="text" id="br_avg" readonly>
+                            <h2 class="input_q">Baserunning Average</h2>  
+                        </div>
+                        <div id="on_base_pct" class="calcs">
+                            <h1>On Base Percentage</h1>
+                            <input class="text_box" type="text" id="hits">
+                            <h2 class="input_q">Hits</h2>
+                            <input class="text_box" type="text" id="walks">
+                            <h2 class="input_q">Walks</h2>
+                            <input class="text_box" type="text" id="hbp">
+                            <h2 class="input_q">Hits by Pitch</h2>
+                            <input class="text_box" type="text" id="atbats">
+                            <h2 class="input_q">At Bats</h2>
+                            <input class="text_box" type="text" id="sf">
+                            <h2 class="input_q">Sacrifice Flies</h2>
+                            <br>
+                            <input id="submit_OBP" class="submit_btn" type="submit" value="Calculate" onclick="calc_OBP()">
+                            <br><br><br>
+                            <input class="text_box" type="text" id="obp" readonly>
+                            <h2 class="input_q">On Base Percentage</h2>
+                        </div>
                     </div>
-                    <div id="inside_calc_right">
+                    <div id="inside_calc_right" class="calc_con">
+                        <div id="era_calc" class="calcs">
+                            <h1>ERA Calculator</h1>
+                            <input class="text_box" type="text" id="earned_runs">
+                            <h2 class="input_q">Earned Runs</h2>
+                            <input class="text_box" type="text" id="in_pitch">
+                            <h2 class="input_q">Innings Pitched</h2>
+                            <br>
+                            <input id="submit_ERA" class="submit_btn" type="submit" value="Calculate" onclick="calc_ERA()">
+                            <br><br><br>
+                            <input class="text_box" type="text" id="era" readonly>
+                            <h2 class="input_q">ERA</h2>
+                        </div>
+                        <div id="bat_avg" class="calcs">
+                            <h1>Batting Average Calculator</h1>
+                            <input class="text_box" type="text" id="num_hits">
+                            <h2 class="input_q">Number of Hits</h2>
+                            <input class="text_box" type="text" id="num_bats">
+                            <h2 class="input_q">Number of at Bats</h2>
+                            <br>
+                            <input id="submit_BRA" class="submit_btn" type="submit" value="Calculate" onclick="calc_BA()">
+                            <br><br><br>
+                            <input class="text_box" type="text" id="ba" readonly>
+                            <h2 class="input_q">Batting Average</h2>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -99,6 +153,6 @@
 
             </footer>
         </div>
-        <script src="js/calculator.js"></script>
+        <script type="text/javascript" src="js/baseball_functs.js"></script>
     </body>
 </html>
